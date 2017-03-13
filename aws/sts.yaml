@@ -1,0 +1,74 @@
+# SurviveTheStream
+# Launch an EC2 instance suitable for running SurviveTheStream
+#   Minecraft metagame with all security groups preconfigured
+#   and all depenedencies pre-installed
+# vim: set ts=2 expandtab:
+
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: This template launches an EC2 instance prepared to run the SurviveTheStream metagame
+
+Parameters:
+  Username:
+    Description: "Username to create on instance for login - default ec2-user"
+    Type: "String"
+    Default: "ec2-user"
+  InstanceType:
+    Description: "EC2 instance type - Recommend t2.medium or t2.large - t2.nano for testing only"
+    Type: "String"
+    Default: "t2.medium"
+    AllowedValues:
+      - t2.medium
+      - t2.large
+      - c4.large
+      - c4.xlarge
+      - t2.nano
+  Subnet:
+    Description: "Public subnet to launch instance in"
+    Type: "AWS::EC2::Subnet::Id"
+  SSHKey:
+    Description: "SSH Keypair name to use for logging into instance"
+    Type: "AWS::EC2::KeyPair::KeyName"
+  MyIP:
+    Description: "My IP address to allow SSH into instance.  Default is insecure and wide open."
+    Type: "String"
+    Default: "0.0.0.0/0"
+
+Outputs:
+  ServerIP:
+    Description: "Use this IP to connect to the server to play"
+    Value: !GetAtt GameServer.PublicIp
+
+Resources:
+  GameServer:
+    Type: "AWS::EC2::Instance"
+    Properties:
+      KeyName: !Ref SSHKey
+      InstanceType: !Ref InstanceType
+      SubnetID: !Ref Subnet
+      SecurityGroups:
+        - !Ref GSSecurityGroup
+      Tags:
+        - Key: Name
+          Value: MinecraftSTS
+      UserData:
+        Fn::Base64: !Sub |
+          #!/bin/bash
+          # Ensure we have our dependencies
+          yum install -y tmux
+          # Install Oracle JVM
+          #
+  GSSecurityGroup:
+    Type: "AWS::EC2::SecurityGroup"
+    Properties:
+      GroupDescription: Security Group for STS Instance
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        ToPort: '22'
+        CidrIp: !Ref MyIP
+      - IpProtocol: tcp
+        ToPort: 25565
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: udp
+        ToPort: 25565
+        CidrIp: 0.0.0.0/0

@@ -1,0 +1,7 @@
+[
+  { "ParameterKey": "Username",  "ParameterValue": "ec2-user" },
+  { "ParameterKey": "InstanceType",  "ParameterValue": "t2.nano" },
+  { "ParameterKey": "Subnet",  "ParameterValue": "" },
+  { "ParameterKey": "SSHKey",  "ParameterValue": "" },
+  { "ParameterKey": "MyIP",  "ParameterValue": "0.0.0.0/0" }
+]
