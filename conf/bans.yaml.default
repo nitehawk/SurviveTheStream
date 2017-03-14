@@ -1,0 +1,9 @@
+---
+- name: mcignhere
+  uuid: mc uuid
+  created: Date player was banned
+  reason: Why they were banned
+- name: mcignhere
+  uuid: mc uuid
+  created: Date player was banned
+  reason: Why they were banned
