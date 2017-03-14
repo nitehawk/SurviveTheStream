@@ -1,0 +1,3 @@
+# Track default configs, ignore configured files
+conf/*.json
+game/*
