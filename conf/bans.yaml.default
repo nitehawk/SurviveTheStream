@@ -1,4 +1,6 @@
 ---
+# Ban these players forever.
+#   Note:  The default ban file is not used (at this time)
 - name: mcignhere
   uuid: mc uuid
   created: Date player was banned
