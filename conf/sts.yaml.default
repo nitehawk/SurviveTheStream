@@ -1,7 +1,7 @@
 ---
-# This file contains specific configuration elements for the STS game that can be read
-# and configured by the launcher scripts.    This section does not include the commands
-# sent to the MC server to launch the game
+# This file contains specific configuration elements for the STS game that can
+# be read and configured by the launcher scripts.    This section does not
+# include the commands sent to the MC server to launch the game
 # File named 'sts.yaml.default' used from conf directory as a template
 - Key: STS Host
   Value: nite97m
