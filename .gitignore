@@ -1,3 +1,4 @@
 # Track default configs, ignore configured files
 conf/*.json
+conf/*.yaml
 game/*
