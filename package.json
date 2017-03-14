@@ -1,22 +1,21 @@
-{
-  "name": "survivethestream",
-  "version": "1.0.0",
-  "description": "Scripts to support the Survive the Stream Minecraft meta-game",
-  "main": "script/main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nitehawk/SurviveTheStream.git"
-  },
-  "keywords": [
+{ "name": "survivethestream"
+, "version": "1.0.0"
+, "description": "Scripts to support the Survive the Stream Minecraft meta-game"
+, "main": "script/sts.js"
+, "bin": {
+    "sts": "scripts/sts.js"
+  }
+, "repository": {
+    "type": "git"
+  , "url": "git+https://github.com/nitehawk/SurviveTheStream.git"
+  }
+, "keywords": [
     "Minecraft"
-  ],
-  "author": "Nitehawk",
-  "license": "BSD-2-Clause",
-  "bugs": {
+  ]
+, "author": "Nitehawk"
+, "license": "BSD-2-Clause"
+, "bugs": {
     "url": "https://github.com/nitehawk/SurviveTheStream/issues"
-  },
-  "homepage": "https://github.com/nitehawk/SurviveTheStream#readme"
+  }
+, "homepage": "https://github.com/nitehawk/SurviveTheStream#readme"
 }
