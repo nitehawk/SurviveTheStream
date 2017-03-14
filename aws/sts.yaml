@@ -55,7 +55,7 @@ Resources:
         Fn::Base64: !Sub |
           #!/bin/bash
           # Ensure we have our dependencies
-          yum install -y tmux
+          yum install -y tmux java-1.8.0-openjdk git
           # Install Oracle JVM
           #
   GSSecurityGroup:
