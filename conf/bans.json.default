@@ -1,0 +1,8 @@
+[
+  {
+    "uuid": "mc uuid",
+    "name": "name that was banned, uuid is used",
+    "created": "2017-03-14 hh:mm:ss",
+    "reason": "Some reason"
+  }
+]
