@@ -56,8 +56,11 @@ Resources:
           #!/bin/bash
           # Ensure we have our dependencies
           yum install -y tmux java-1.8.0-openjdk git
-          # Install Oracle JVM
-          #
+          # Install nodejs
+          curl --silent --location https://rpm.nodesource.com/setup_7.x | bash -
+          yum install -y nodejs
+          # Install STS package
+          npm install -g https://github.com/nitehawk/SurviveTheStream
   GSSecurityGroup:
     Type: "AWS::EC2::SecurityGroup"
     Properties:
