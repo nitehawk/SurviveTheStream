@@ -2,8 +2,9 @@
 , "version": "1.0.0"
 , "description": "Scripts to support the Survive the Stream Minecraft meta-game"
 , "main": "script/sts.js"
-, "bin": {
-    "sts": "scripts/sts.js"
+, "bin": "script/sts.js"
+, "scripts": {
+    "sts": "node script/sts.js"
   }
 , "repository": {
     "type": "git"
