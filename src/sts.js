@@ -1,9 +1,11 @@
-#!/usr/bin/env node
+#!/usr/bin/env babel-node
 "use strict";
 // Command line handler - sts.js
 
-const init = require('../script/init.js');
+import stsinit from './init.js';
+const init = new stsinit(null);
 
+init.getServerJar();
 // Get our current path so we can get back there if we move around
 let pwd = process.cwd();
 

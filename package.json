@@ -2,10 +2,12 @@
   "name": "survivethestream",
   "version": "1.0.0",
   "description": "Scripts to support the Survive the Stream Minecraft meta-game",
-  "main": "script/sts.js",
-  "bin": "script/sts.js",
+  "main": "src/sts.js",
+  "bin": "src/sts.js",
   "scripts": {
-    "sts": "babel-node script/sts.js"
+    "sts": "babel-node src/sts.js",
+    "build": "babel lib -d dist",
+    "test": "mocha --compilers js:babel-register"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,8 @@
     "babel-cli": "^6.24.0",
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-stage-2": "^6.22.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
   }
 }
