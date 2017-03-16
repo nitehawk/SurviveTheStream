@@ -20,4 +20,4 @@ export default class stsinit {
     //let svrjar = fs.createWriteStream("minecraft_server.jar");
     //let req = http.get(url, function(response) { response.pipe(svrjar); });
   }
-};
+}

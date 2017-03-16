@@ -8,6 +8,7 @@ describe('STS Initialization', () => {
   });
 
   it('Should download the 1.11.2 server jar', done => {
-    init.getServerJar('1.11.2')
+    let init = new stsinit(null);
+    init.getServerJar('1.11.2');
   });
 });
