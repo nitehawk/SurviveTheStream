@@ -2,7 +2,11 @@
 
 Survive the stream is a meta game mode for Minecraft originally created by @DeciTM.
 
-This repo contains a set of scripts for running STS streams.
+This NodeJS package contains a set of scripts to run a SurviveTheStream game
+
+Note:  This package is currently very bare bones.
+
+Note:  If you use this package to run your own SurviveTheStream events, I'd appreciate a link.
 
 ## Requirements
 
@@ -10,12 +14,6 @@ This repo contains a set of scripts for running STS streams.
   * No... I won't be making these scripts work for windows.
   * This can be an AWS instance (scripts were developed on/for AWS)
     * Planned:  AWS tools to autoconfigure a suitable instance for stream (CFT w/ script)
-
-## High level
-
-We make use of tmux to manage the various elements of the game.   One pane has the server running.   A second
-pane processes the server output looking for specific trigger events.   A third pane runs additional timed events.
-Finally, the 4th pane is available for sending configuration related commands.
 
 ## STS round
 
@@ -48,9 +46,15 @@ Finally, the 4th pane is available for sending configuration related commands.
 * Escalating goals - Boss fights, etc.
 * Create end portal
 
+## Random themes for rounds
+
+* Dragon Hunt
+* Withering
+* 
+
 ## Planned items
 
-* Beam interactive integration
+* Beam interactive integration - This should be relatively easy, since we're in JS anyway..
   * Trigger various timed events
   * Food
   * Mobs
